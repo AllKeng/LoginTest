@@ -12,7 +12,15 @@ const Register = (props) => {
   const [passwordError, setPasswordError] = useState("")
     
   //const navigate = useHistory();
-        
+  
+  /**
+   * Removes red error messages when called.
+   */
+  const resetErrors = () => {
+    setUserError("");
+    setPasswordError("");
+  }
+  
   /**
    * Here we upload the provided username and password to the database
    */
@@ -65,7 +73,12 @@ useEffect(() => {
       <input 
         value={username}
         placeholder="Create username here"
-        onChange={ev => setUsername(ev.target.value)}
+        onChange={ev => {
+          setUsername(ev.target.value)
+          resetErrors();
+          }
+        }
+        
         className={"inputBox"} />
       <label className="errorLabelR">{userError}</label>
     </div>
@@ -75,7 +88,10 @@ useEffect(() => {
       <input 
         value = {password}
         placeholder="Create password here"
-        onChange={ev => setPassword(ev.target.value)}
+        onChange={ev => {
+          setPassword(ev.target.value)
+          resetErrors();
+        }}
         className={"inputBox"} />
       <label className="errorLabelR">{passwordError}</label>
     </div>
