@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import "../../../styles/Register.css";
+
 //import { useHistory } from "react-router-dom";
 
 // Use history.push('/your-component')
@@ -7,19 +8,52 @@ import "../../../styles/Register.css";
 const Register = (props) => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const [userError/*, setUserError*/] = useState("")
-  const [passwordError/*, setPasswordError*/] = useState("")
+  const [userError, setUserError] = useState("")
+  const [passwordError, setPasswordError] = useState("")
     
   //const navigate = useHistory();
         
   /**
    * Here we upload the provided username and password to the database
    */
-  const onButtonClick = () => {
+  const createAcc = useCallback(() => {
     // TODO 
+    // CHECK IF USERNAME AND PASSWORD EXIST ALREADY
+    if(username !== "sungod") {
+      setUserError("This username already exists.");
 
-  }
+    }
+    if(password.length < 7) {
+      setPasswordError("The password must be at least 7 characters.");
 
+    }
+    else {
+      alert("Correct");
+    }
+  }, [username,password]);
+
+/**
+   * Checks to see if the user pressed the enter key
+   * Calls pressLogin 
+   */
+useEffect(() => {
+  const keyDownHandler = event => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      createAcc();
+    }
+  };
+
+  document.addEventListener('keydown', keyDownHandler);
+
+  return () => {
+    document.removeEventListener('keydown', keyDownHandler);
+  };
+}, [createAcc]);
+
+/**
+ * Returns html elements
+ */
   return <div className ={"mainContainerR"}>
 
     <div className={"titleContainerR"}>
@@ -51,7 +85,7 @@ const Register = (props) => {
       <input 
         className={"inputButtonR"}
         type="button"
-        onClick = {onButtonClick}
+        onClick = {createAcc}
         value={ "Sign Up" } />
     </div>
   </div>

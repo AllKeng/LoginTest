@@ -85,3 +85,8 @@ button, .inputButtonG {
     border-radius: 8px;
     cursor: pointer;
 }
+
+.errorLabel {
+    font-weight: bold;
+    font-style: italic;
+}

@@ -47,7 +47,7 @@
   justify-content: center;
 }
 
-.inputContainerR > .errorLabel {
+.inputContainerR > .errorLabelR {
   color: red;
   font-size: 12px;
   }
