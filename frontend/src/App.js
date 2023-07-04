@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch} from 'react-router-dom'; // v5 not v6
+import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'; // v5 not v6
 
 import './App.css';
 import Tabs from './components/Login/Tabs';
@@ -9,6 +9,9 @@ function App() {
   return (
       <BrowserRouter>
         <Switch>
+        <Route exact path="/">
+              <Redirect to="/login" />
+          </Route>
           <Route path="/login">
             <Tabs />
           </Route>
