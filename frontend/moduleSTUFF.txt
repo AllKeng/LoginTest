@@ -1,5 +1,5 @@
 npx create-react-app frontend   --> creates new folder called frontend with environment
-npm install react-router-dom    --> still in outer folder
+npm install react-router-dom@5.2.0    --> still in outer folder
 Transfer everything here from pages to README.md into the frontend folder 
 
 cd frontend                 
