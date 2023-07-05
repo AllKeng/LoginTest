@@ -1,15 +1,26 @@
 .Tabs {
-    width: 50%;
+    position: relative;
+    /* Positive value to move right, Negative value to move up*/
+    left: 300px;
+    top: -20px;
+
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+    width: 30%;
     height: auto;
-    min-height: 550px;
-    background: #053742;
+    min-height: 400px;
+    /*background: #053742;*/
     margin: 3.5rem auto 1.5rem;
     padding: 2rem 1rem;
     color: #E8F0F2;
-    border-radius: 2rem;
+    border-radius: 1.2rem;
     @media (max-width: 769px) {
         padding: 2rem 0;
     }
+
 }
 
 .FirstTab p,
@@ -24,7 +35,7 @@ ul.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #39A2DB;
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 2rem;
     padding-left: 0px;
     @media (max-width: 768px) {
@@ -33,12 +44,12 @@ ul.nav {
 }
   
 ul.nav li {
-    width: 50%;
+    width: 60%;
     padding: 1rem;
     list-style: none;
     text-align: center;
     cursor: pointer;
-    transition: all 0.7s;
+    transition: all 0.5s;
     border-bottom-left-radius: 2rem;
     border-top-left-radius: 2rem;
 }
@@ -50,11 +61,20 @@ ul.nav li:nth-child(2) {
 }
 
 ul.nav li:hover {
-    background: rgba(58, 228, 199, 0.15);
+    background: rgba(228, 171, 58, 0.15);
 }
 
 /* Modifies color of open tab of either login or sign up*/
 ul.nav li.active {
     /* SET TO GRADIENT SCHEME */
-    background: linear-gradient(to left, rgb(165, 211, 212),#39A2DB);
+    background: linear-gradient(to left, #8294C4,#FFEAD2);
+    color: rgb(20, 25, 118);
+}
+
+/* Add Geisel background image */
+body {
+    min-height: 100vh;
+    background: url("./geisel.png") no-repeat;
+    background-size: cover;
+    background-position: center;
 }

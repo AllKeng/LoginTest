@@ -82,9 +82,10 @@ const Login = (props) => {
     <br />
 
     <div className={"inputContainer"}>
+      <i class='bx bx-user' ></i>
       <input 
         value={username}
-        placeholder="Enter your username here"
+        placeholder="Username"
         onChange={ev => {
           setUsername(ev.target.value)
           resetErrors();
@@ -97,9 +98,10 @@ const Login = (props) => {
     <br />
 
     <div className={"inputContainer"}>
+      <i class='bx bx-lock-alt' ></i>
       <input 
         value = {password}
-        placeholder="Enter your password here"
+        placeholder="Password"
         onChange={ev => {
           setPassword(ev.target.value)
           resetErrors();
@@ -122,7 +124,7 @@ const Login = (props) => {
         className={"inputButtonG"}
         type="button"
         onClick = {loginAsGuest}
-        value={ "Log in as Guest" } />
+        value={ "Play as Guest" } />
     </div>
 
   </div>

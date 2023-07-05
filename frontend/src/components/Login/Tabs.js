@@ -19,7 +19,8 @@ const Tabs = () => {
 
     return (
     <div className="Tabs">
-        {/* Tab nav */}
+        {/* Tab nav */
+        }
         <ul className="nav">
             <li 
                 className={activeTab === "tab1" ? "active" : ""}
