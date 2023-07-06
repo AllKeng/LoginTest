@@ -4,7 +4,6 @@ import icon from "../styles/panda.png"
 
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
-
   return (
     <nav className="navigation">
       <a href="/" className="group-name">
@@ -36,6 +35,9 @@ export default function Navbar() {
           </li>
           <li>
             <a href="/contact">Creators</a>
+          </li>
+          <li>
+            
           </li>
         </ul>
       </div>
