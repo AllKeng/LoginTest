@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="navigation">
       <a href="/" className="group-name">
-        Panda Xprezz
+        Pandas Xprezz
         <img className="pandaxprezzicon" alt="Panda Xprezz" src={icon} />
       </a>
       <button
