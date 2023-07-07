@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'; // v5 
 
 import './App.css';
 import Tabs from './components/Login/Tabs';
-import Home from './components/Home/Home';
+import Creators from './components/Creators/Creators';
 import Navbar from './components/Navbar';
 import Play from './components/Play/Play';
 
@@ -21,11 +21,15 @@ function App() {
           </Route>
 
           <Route path="/home">
-            <Home />
+            <Redirect to="/login" />
           </Route>
 
           <Route path="/play">
             <Play />
+          </Route>
+
+          <Route path="/creators">
+            <Creators />
           </Route>
 
         </Switch>

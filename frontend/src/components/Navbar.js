@@ -34,7 +34,7 @@ export default function Navbar() {
             <a href="https://github.com/AllKeng/LoginTest">Code</a>
           </li>
           <li>
-            <a href="/contact">Creators</a>
+            <a href="/creators">Creators</a>
           </li>
           <li>
             
