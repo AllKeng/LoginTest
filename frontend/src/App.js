@@ -6,6 +6,7 @@ import Tabs from './components/Login/Tabs';
 import Creators from './components/Creators/Creators';
 import Navbar from './components/Navbar';
 import Play from './components/Play/Play';
+import Leaderboard from './components/Leaderboard/Leaderboard';
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
 
           <Route path="/creators">
             <Creators />
+          </Route>
+
+          <Route path="/leaderboard">
+            <Leaderboard />
           </Route>
 
         </Switch>

@@ -25,6 +25,9 @@ export default function Navbar() {
       >
         <ul className="sections">
           <li>
+            <a href="/leaderboard">Leaderboard</a>
+          </li>
+          <li>
             <a href="/home">Home</a>
           </li>
           <li>
